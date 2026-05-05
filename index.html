@@ -101,8 +101,15 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(160deg, #D4C4B0 0%, #C0A98A 50%, #A8906A 100%);
-    opacity: 0;
+    background-image: url('IMG-20260311-WA0038.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(250, 247, 243, 0.72);
   }
   .hero-eyebrow {
     font-size: 10px;
@@ -342,6 +349,12 @@
     overflow: hidden;
     cursor: pointer;
   }
+  .portfolio-item img {
+    transition: transform 0.5s ease;
+  }
+  .portfolio-item:hover img {
+    transform: scale(1.04);
+  }
   .portfolio-item:first-child {
     grid-row: span 2;
   }
@@ -356,6 +369,23 @@
     aspect-ratio: 3/4;
     height: 100%;
   }
+  .portfolio-item:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-item:first-child > img {
+    flex: 1;
+    min-height: 400px;
+    aspect-ratio: unset;
+  }
+  .portfolio-item > img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .portfolio-item:hover > img { transform: scale(1.04); }
   .port-img p {
     font-size: 10px; letter-spacing: 0.15em;
     text-transform: uppercase; color: rgba(255,255,255,0.45);
@@ -624,6 +654,7 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+  <div class="hero-bg"></div>
   <p class="hero-eyebrow">Design de Interiores · Oliveira de Azeméis</p>
   <h1 class="hero-logo-name">LISA</h1>
   <p class="hero-logo-sub">interiores</p>
@@ -639,10 +670,7 @@
 <!-- ABOUT -->
 <section class="about" id="sobre">
   <div class="about-img-col">
-    <div class="about-img-placeholder">
-      <div class="img-icon" style="border-color: rgba(255,255,255,0.35);"></div>
-      <p>Foto retrato / projeto</p>
-    </div>
+    <img src="IMG-20260311-WA0039.jpg" alt="Projecto Lisa Interiores" style="width:100%;height:100%;object-fit:cover;display:block;">
   </div>
   <div class="about-content">
     <div class="reveal">
@@ -716,30 +744,24 @@
   </div>
   <div class="portfolio-grid">
     <div class="portfolio-item reveal">
-      <div class="port-img" style="background: linear-gradient(135deg, #C2AE94 0%, #D8C4A8 100%);">
-        <p>Foto principal</p>
-      </div>
+      <img src="IMG-20260311-WA0040.jpg" alt="Moradia Contemporânea" style="width:100%;height:100%;object-fit:cover;display:block;">
       <div class="port-caption">
-        <p class="name">Apartamento Príncipe Real</p>
-        <p class="type">Projecto de Interiores · 2024</p>
+        <p class="name">Moradia Contemporânea</p>
+        <p class="type">Projecto de Interiores · 2025</p>
       </div>
     </div>
     <div class="portfolio-item reveal reveal-delay-1">
-      <div class="port-img" style="background: linear-gradient(135deg, #B8A08A 0%, #CCBA9E 100%);">
-        <p>Foto projecto</p>
-      </div>
+      <img src="IMG-20260311-WA0038.jpg" alt="Sala de Jantar" style="width:100%;height:100%;object-fit:cover;display:block;">
       <div class="port-caption">
-        <p class="name">Moradia Cascais</p>
-        <p class="type">Remodelação · 2024</p>
+        <p class="name">Sala de Jantar</p>
+        <p class="type">Design de Interiores · 2025</p>
       </div>
     </div>
     <div class="portfolio-item reveal reveal-delay-2">
-      <div class="port-img" style="background: linear-gradient(135deg, #A89070 0%, #BCAA86 100%);">
-        <p>Foto projecto</p>
-      </div>
+      <img src="IMG-20260311-WA0039.jpg" alt="Sala de Estar" style="width:100%;height:100%;object-fit:cover;display:block;">
       <div class="port-caption">
-        <p class="name">Escritório Startup</p>
-        <p class="type">Design Comercial · 2023</p>
+        <p class="name">Sala de Estar</p>
+        <p class="type">Design de Interiores · 2025</p>
       </div>
     </div>
     <div class="portfolio-item reveal reveal-delay-1">
